@@ -1,5 +1,7 @@
 Metastories::Application.routes.draw do
-  resources :stories
+  resources :stories do
+    resources :comments
+  end
 
 
   root :to => "home#index"
