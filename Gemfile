@@ -36,3 +36,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+#gem 'clearance', '1.0.0.rc7'
+

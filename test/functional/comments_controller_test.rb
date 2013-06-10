@@ -15,4 +15,6 @@ class CommentsControllerTest < ActionController::TestCase
 
     assert_redirected_to story_path(assigns(:story))
   end
+  test "should delete comment" do
+  end
 end
