@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  http_basic_authenticate_with :name => "foo", :password => "bar", :except => [:index, :show]
   # GET /stories
   # GET /stories.json
   def index

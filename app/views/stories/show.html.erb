@@ -15,6 +15,11 @@
   <%= @story.content %>
 </p>
 
+<p>
+  <b>Tags:</b>
+  <%= @story.tags.map { |t| t.name }.join(", ") %>
+</p>
+
 <h2>Comments</h2>
 <%= render @story.comments %>
 

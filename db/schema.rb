@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130609010641) do
+ActiveRecord::Schema.define(:version => 20130611000310) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -30,5 +30,14 @@ ActiveRecord::Schema.define(:version => 20130609010641) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "story_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tags", ["story_id"], :name => "index_tags_on_story_id"
 
 end
